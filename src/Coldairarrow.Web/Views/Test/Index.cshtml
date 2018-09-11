@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0">
+    <title>WeUI</title>
+    <!-- head 中 -->
+    <link rel="stylesheet" href="https://cdn.bootcss.com/weui/1.1.2/style/weui.min.css">
+    <link rel="stylesheet" href="https://cdn.bootcss.com/jquery-weui/1.2.0/css/jquery-weui.min.css">
+</head>
+<body>
+    <div class="weui-cells weui-cells_form">
+        <div class="weui-cell">
+            <div class="weui-cell__hd">
+                <label class="weui-label">监控区域</label>
+            </div>
+            <div class="weui-cell__bd">
+                <input id="area" class="weui-input" placeholder="请选择监控区域">
+            </div>
+        </div>
+    </div>
+    <a id="changeSelect" href="javascript:;" class="weui-btn weui-btn_primary">更换下拉</a>
+    <!-- body 最后 -->
+    <script src="https://cdn.bootcss.com/jquery/1.11.0/jquery.min.js"></script>
+    <script src="https://cdn.bootcss.com/jquery-weui/1.2.0/js/jquery-weui.min.js"></script>
+    <script>
+        var item1 = [
+            {
+                title: "iPhone 3GS",
+                value: "001",
+            },
+            {
+                title: "iPhone 5",
+                value: "002",
+            },
+            {
+                title: "iPhone 5S",
+                value: "003",
+            },
+            {
+                title: "iPhone 6",
+                value: "004",
+            },
+            {
+                title: "iPhone 6S",
+                value: "005",
+            },
+            {
+                title: "iPhone 6P",
+                value: "006",
+            },
+            {
+                title: "iPhone 6SP",
+                value: "007",
+            },
+            {
+                title: "iPhone SE",
+                value: "008",
+            },
+            {
+                title: "iPhone 7",
+                value: "009"
+            }
+        ];
+        var item2 = [
+            {
+                title: "iPhone 3GS",
+                value: "001",
+            },
+            {
+                title: "iPhone 5",
+                value: "002",
+            }
+        ];
+        $("#area").select({
+            title: "选择手机",
+            items: [
+                {
+                    title: "iPhone 3GS",
+                    value: "001",
+                },
+                {
+                    title: "iPhone 5",
+                    value: "002",
+                },
+                {
+                    title: "iPhone 5S",
+                    value: "003",
+                },
+                {
+                    title: "iPhone 6",
+                    value: "004",
+                },
+                {
+                    title: "iPhone 6S",
+                    value: "005",
+                },
+                {
+                    title: "iPhone 6P",
+                    value: "006",
+                },
+                {
+                    title: "iPhone 6SP",
+                    value: "007",
+                },
+                {
+                    title: "iPhone SE",
+                    value: "008",
+                },
+                {
+                    title: "iPhone 7",
+                    value: "009"
+                }
+            ]
+        });
+        $(function () {
+            $('#changeSelect').click(function () {
+                $('#area').select('update', { items: item2 })
+            });
+        });
+    </script>
+</body>
+</html>
