@@ -171,12 +171,14 @@
     <Compile Include="Common\PermissionManage.cs" />
     <Compile Include="Common\SystemMenuManage.cs" />
     <Compile Include="Common\UrlPermissionManage.cs" />
+    <Compile Include="Controllers\DemoController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\TestController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Scripts\vendor\umeditor\net\Uploader.cs" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\FilterConfig.cs" />
@@ -538,6 +540,87 @@
     <Content Include="Scripts\vendor\layui\lay\modules\util.js" />
     <Content Include="Scripts\vendor\md5\md5.min.js" />
     <Content Include="Scripts\vendor\template\template.js" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\emotion\emotion.css" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\emotion\emotion.js" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\emotion\images\0.gif" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\emotion\images\bface.gif" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\emotion\images\cface.gif" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\emotion\images\fface.gif" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\emotion\images\jxface2.gif" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\emotion\images\neweditor-tab-bg.png" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\emotion\images\tface.gif" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\emotion\images\wface.gif" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\emotion\images\yface.gif" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\formula\formula.css" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\formula\formula.html" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\formula\formula.js" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\formula\images\formula.png" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\image\image.css" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\image\image.js" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\image\images\close.png" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\image\images\upload1.png" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\image\images\upload2.png" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\link\link.js" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\map\map.html" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\map\map.js" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\video\images\center_focus.jpg" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\video\images\left_focus.jpg" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\video\images\none_focus.jpg" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\video\images\right_focus.jpg" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\video\video.css" />
+    <Content Include="Scripts\vendor\umeditor\dialogs\video\video.js" />
+    <Content Include="Scripts\vendor\umeditor\index.html" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\en.js" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\addimage.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\alldeletebtnhoverskin.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\alldeletebtnupskin.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\background.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\button.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\copy.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\deletedisable.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\deleteenable.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\imglabel.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\listbackground.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\localimage.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\music.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\rotateleftdisable.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\rotateleftenable.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\rotaterightdisable.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\rotaterightenable.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\en\images\upload.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\zh-cn\images\copy.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\zh-cn\images\imglabel.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\zh-cn\images\localimage.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\zh-cn\images\music.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\zh-cn\images\upload.png" />
+    <Content Include="Scripts\vendor\umeditor\lang\zh-cn\zh-cn.js" />
+    <Content Include="Scripts\vendor\umeditor\net\upload\2018-09-06\0a89500b-2307-4174-9d0f-3882c8423963.png" />
+    <Content Include="Scripts\vendor\umeditor\net\upload\2018-09-06\570841a3-e808-403a-9aee-ece34e9adc7a.jpeg" />
+    <Content Include="Scripts\vendor\umeditor\net\upload\2018-09-06\6686b9d8-1e14-4a59-8aa0-21c3806240b5.jpeg" />
+    <Content Include="Scripts\vendor\umeditor\net\upload\2018-09-06\c2973aab-66a8-41fe-b374-9a2f5dd85b1a.jpg" />
+    <Content Include="Scripts\vendor\umeditor\themes\default\css\umeditor.css" />
+    <Content Include="Scripts\vendor\umeditor\themes\default\css\umeditor.min.css" />
+    <Content Include="Scripts\vendor\umeditor\themes\default\images\caret.png" />
+    <Content Include="Scripts\vendor\umeditor\themes\default\images\close.png" />
+    <Content Include="Scripts\vendor\umeditor\themes\default\images\icons.gif" />
+    <Content Include="Scripts\vendor\umeditor\themes\default\images\icons.png" />
+    <Content Include="Scripts\vendor\umeditor\themes\default\images\ok.gif" />
+    <Content Include="Scripts\vendor\umeditor\themes\default\images\pop-bg.png" />
+    <Content Include="Scripts\vendor\umeditor\themes\default\images\spacer.gif" />
+    <Content Include="Scripts\vendor\umeditor\themes\default\images\videologo.gif" />
+    <Content Include="Scripts\vendor\umeditor\third-party\jquery.min.js" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\STIXFontLicense2010.txt" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.svg" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.svg" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.svg" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.svg" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\Symbola.svg" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\mathquill.css" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\mathquill.js" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\mathquill.min.js" />
+    <Content Include="Scripts\vendor\umeditor\umeditor.config.js" />
+    <Content Include="Scripts\vendor\umeditor\umeditor.js" />
+    <Content Include="Scripts\vendor\umeditor\umeditor.min.js" />
     <Content Include="Scripts\vendor\util\easyui-extends.js" />
     <Content Include="Scripts\vendor\util\upload-time.js" />
     <Content Include="Scripts\vendor\util\util.js" />
@@ -657,10 +740,6 @@
     <Content Include="Views\Home\Statis.cshtml" />
     <Content Include="Views\Home\Test.cshtml" />
     <Content Include="Views\Shared\_Layout_List.cshtml" />
-    <Content Include="Views\Test\Form0.cshtml" />
-    <Content Include="Views\Test\Form1.cshtml" />
-    <Content Include="Views\Test\Form2.cshtml" />
-    <Content Include="Views\Test\Index.cshtml" />
     <Content Include="Views\Test\RequestDemo.cshtml" />
   </ItemGroup>
   <ItemGroup>
@@ -673,6 +752,26 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <Content Include="Scripts\vendor\umeditor\net\getContent.ashx" />
+    <Content Include="Scripts\vendor\umeditor\net\imageUp.ashx" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.eot" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.ttf" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneral-webfont.woff" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.eot" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.ttf" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbol-webfont.woff" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.eot" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.ttf" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralbolita-webfont.woff" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.eot" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.ttf" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\stixgeneral-bundle\stixgeneralitalic-webfont.woff" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\Symbola.eot" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\Symbola.otf" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\Symbola.ttf" />
+    <Content Include="Scripts\vendor\umeditor\third-party\mathquill\font\Symbola.woff" />
+    <Content Include="Views\Shared\_Layout_List_js.cshtml" />
+    <Content Include="Views\Demo\UMEditor.cshtml" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

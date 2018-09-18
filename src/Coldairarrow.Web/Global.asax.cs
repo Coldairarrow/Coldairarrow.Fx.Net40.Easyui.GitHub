@@ -76,7 +76,7 @@ namespace Coldairarrow.Web
                 string vbs = $@"wscript.sleep 10*1000
 Dim http
 Set http = CreateObject(""Msxml2.ServerXMLHTTP"")
-http.open ""GET"",""{GlobalSwitch.WebRooturl}"",False
+http.open ""GET"",""{GlobalSwitch.WebRootUrl}"",False
 http.send
 CreateObject(""scripting.filesystemobject"").deletefile wscript.scriptfullname
 ";

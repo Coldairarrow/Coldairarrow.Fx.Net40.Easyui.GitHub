@@ -26,7 +26,7 @@
         /// <summary>
         /// 网站根地址
         /// </summary>
-        public static string WebRooturl { get; set; } = "http://localhost:62317/";
+        public static string WebRootUrl { get; set; } = "http://localhost:62317/";
 
         #endregion
 
