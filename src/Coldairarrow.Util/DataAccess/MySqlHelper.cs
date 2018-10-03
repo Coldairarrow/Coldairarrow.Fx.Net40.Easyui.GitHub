@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.Data.Common;
 using System.Data.SqlClient;
@@ -25,7 +26,29 @@ namespace Coldairarrow.Util
 
         #region 私有成员
 
-        protected override Dictionary<string, Type> DbTypeDic => throw new NotImplementedException();
+        protected override Dictionary<string, Type> DbTypeDic { get; } = new Dictionary<string, Type>
+        {
+            { "boolean",typeof(bool)},
+            { "bit(1)",typeof(bool)},
+            { "tinyint unsigned",typeof(byte)},
+            { "binary",typeof(byte[])},
+            { "varbinary",typeof(byte[])},
+            { "blob",typeof(byte[])},
+            { "longblob",typeof(byte[])},
+            { "datetime",typeof(DateTime)},
+            { "double",typeof(double)},
+            { "char(36)",typeof(Guid)},
+            { "smallint",typeof(Int16)},
+            { "int",typeof(Int32)},
+            { "bigint",typeof(Int64)},
+            { "tinyint",typeof(SByte)},
+            { "float",typeof(Single)},
+            { "char",typeof(string)},
+            { "varchar",typeof(string)},
+            { "text",typeof(string)},
+            { "longtext",typeof(string)},
+            { "time",typeof(TimeSpan)}
+        };
 
         #endregion
 
@@ -36,10 +59,19 @@ namespace Coldairarrow.Util
         /// </summary>
         /// <param name="schemaName">模式（架构）</param>
         /// <returns></returns>
-        public override List<DbTableInfo> GetDbAllTables(string schemaName = "public")
+        public override List<DbTableInfo> GetDbAllTables(string schemaName = null)
         {
-            string sql = @"";
-            return GetListBySql<DbTableInfo>(sql);
+            DbProviderFactory dbProviderFactory = DbProviderFactoryHelper.GetDbProviderFactory(_dbType);
+            string dbName = string.Empty;
+            using (DbConnection conn = dbProviderFactory.CreateConnection())
+            {
+                conn.ConnectionString = _conStr;
+                dbName = conn.Database;
+            }
+            string sql = @"SELECT TABLE_NAME as TableName,table_comment as Description 
+FROM INFORMATION_SCHEMA.TABLES 
+WHERE TABLE_SCHEMA = @dbName";
+            return GetListBySql<DbTableInfo>(sql, new List<DbParameter> { new MySqlParameter("@dbName", dbName) });
         }
 
         /// <summary>
@@ -49,8 +81,16 @@ namespace Coldairarrow.Util
         /// <returns></returns>
         public override List<TableInfo> GetDbTableInfo(string tableName)
         {
-            string sql = @"";
-            return GetListBySql<TableInfo>(sql, new List<DbParameter> { new SqlParameter("@table_name", tableName) });
+            string sql = @"select 
+	a.COLUMN_NAME as Name,
+	a.DATA_TYPE as Type,
+	(a.COLUMN_KEY = 'PRI') as IsKey,
+	(a.IS_NULLABLE = 'YES') as IsNullable,
+	a.COLUMN_COMMENT as Description
+from information_schema.columns a 
+where table_name=@tableName
+ORDER BY a.ORDINAL_POSITION";
+            return GetListBySql<TableInfo>(sql, new List<DbParameter> { new MySqlParameter("@tableName", tableName) });
         }
 
         /// <summary>
