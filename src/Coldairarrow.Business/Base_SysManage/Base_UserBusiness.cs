@@ -124,7 +124,7 @@ namespace Coldairarrow.Business.Base_SysManage
 
         public static List<string> GetUserRoleIds(string userId)
         {
-            return GetTheUser(userId).RoleIdList;
+            return GetTheUser(userId)?.RoleIdList;
         }
 
         /// <summary>
